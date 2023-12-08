@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  h1 {
+    color: #000;
+    background-color: aquamarine;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem 5rem;
+  }
+  .hero {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b9390;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    .play_btn {
+      width: 90px;
+      height: 90px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background-color: #333;
+      border: 5px solid #fff;
+      box-shadow: rgba(255, 255, 255, 255) 0px 50px 100px -20px,
+        rgba(255, 255, 255, 255) 0px 30px 60px -30px;
+   
+    }
+  }
+}
+
+.reset_btn {
+    position: relative;
+    z-index: 2;
+  color: #000;
+  background-color: aquamarine;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.9rem 3rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  &:hover {
+    background-color: #ff5722;
+    color: #000;
+  }
+}
+.win_new {
+    position: relative;
+    z-index: 2;
+    &.hide{
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.15s ease;
+        height: 0;
+        h2{
+            visibility: hidden;
+            opacity: 0;
+            transform: translate(0);
+            transform-origin: top;
+            transition: all 0.15s ease;
+        }
+    }
+  text-align: center;
+  padding: 1rem 0;
+  
+  h2{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: aquamarine;
+    padding: 3rem;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 20px 0;
+    color: #222;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  .new_game {
+    color: #000;
+    background-color: aquamarine;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.9rem 3rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+}
+
+
+@import "_confetti";
